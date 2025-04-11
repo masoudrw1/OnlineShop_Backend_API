@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/doc/src/main/java/Queris/01_nav.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/doc/src/main/java/Queris/02_file.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/doc/src/main/java/Queris/03_slider.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/doc/src/main/java/Queris/04_pcat.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/doc/src/main/java/Queris/05_product.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/doc/src/main/java/Queris/06_color.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/doc/src/main/java/Queris/07_size.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/doc/src/main/java/Queris/08_pcolor.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/doc/src/main/java/Queris/09_psize.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/doc/src/main/java/Queris/10_content.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/doc/src/main/java/Queris/11_blog.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/doc/src/main/java/Queris/12_permissions.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/doc/src/main/java/Queris/14_role_permissions.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/doc/src/main/java/Queris/15_users.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/doc/src/main/java/Queris/16_user_roles.sql" dialect="MySQL" />
+  </component>
+</project>
