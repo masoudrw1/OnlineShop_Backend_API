@@ -39,7 +39,6 @@ public class PermissionAspect {
             return APIResponse.builder().status(APIStatus.FILED).message("AccessDinaid!").build();
 
         }
-        System.out.println("hi");
         return joinPoint.proceed();
 
 
