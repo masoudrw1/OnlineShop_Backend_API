@@ -13,7 +13,7 @@ public interface BlogRepository extends JpaRepository<Blog, Long> {
 
     @Query("""
             from Blog where status=com.masoud.dataaccess.enums.BlogStatus.Published
-            and publishDate>=current_date
+            and publishDate<=current_date
             order by publishDate desc
            """)
     List<Blog> findAllPublished(Pageable pageable);

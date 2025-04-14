@@ -8,6 +8,7 @@ import com.masoud.dto.site.LimetedBlogDto;
 import com.masoud.dto.site.SinglblogDto;
 import com.masoud.service.site.BlogService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -16,22 +17,24 @@ import java.util.List;
 @RequestMapping("api/blog")
 public class BlogController {
     private final BlogService blogService;
-@Autowired
+
+    @Autowired
     public BlogController(BlogService blogService) {
         this.blogService = blogService;
     }
-    @GetMapping()
+
+    @GetMapping("")
+    @Cacheable(cacheNames = "apiCache30m",key = "'blog_all'+ #page +' - '+#size")
     public APIResponse<List<LimetedBlogDto>> getAll(@RequestParam(required = false) Integer page,
-                                                            @RequestParam (required = false)Integer size)
-    {
+                                                    @RequestParam(required = false) Integer size) {
         return APIResponse.<List<LimetedBlogDto>>builder().
-                data(blogService.readAllPublished(page,size)).status(APIStatus.OK).build();
+                data(blogService.readAllPublished(page, size)).status(APIStatus.OK).build();
 
     }
 
     @GetMapping("{id}")
-    public APIResponse<SinglblogDto> getById(@PathVariable Long id)
-    {
+    @Cacheable(cacheNames = "apiCache30m",key = "'blog_'+ #id")
+    public APIResponse<SinglblogDto> getById(@PathVariable Long id) {
         try {
             return APIResponse.<SinglblogDto>builder().data(blogService.readById(id))
                     .status(APIStatus.OK).build();
